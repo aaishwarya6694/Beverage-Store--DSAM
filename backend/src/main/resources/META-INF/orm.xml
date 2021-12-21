@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd"
+                 version="1.0">
+
+    <named-query name="queryBeverages">
+        <query>Select new de.uniba.dsg.dsam.model.Beverage(b.id, b.manufacturer, b.name, b.promotion, b.quantity, b.price) From BeverageEntity b</query>
+    </named-query>
+
+    <named-query name="queryIncentive">
+        <query>Select new de.uniba.dsg.dsam.model.Incentive(i.id,i.name ,i.type) From IncentiveEntity i</query>
+    </named-query>
+
+    <named-query name="queryOrders">
+        <query>Select new de.uniba.dsg.dsam.model.CustomerOrder(c.id,c.name,c.manufacturer,c.quantity,c.issueDate) From CustomerOrderEntity c</query>
+    </named-query>
+
+</entity-mappings>
